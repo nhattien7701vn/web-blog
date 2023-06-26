@@ -1,0 +1,173 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay.is-active {
+  display: block;
+}
+
+.popup-add {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  transition: 0.3s;
+
+  width: 800px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+
+  background-color: white;
+}
+
+.btn-close {
+  display: block;
+  margin-left: auto;
+
+  transform: rotate(45deg);
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.btn-close:before,
+.btn-close:after {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  content: "";
+  height: 2px;
+  width: 20px;
+  background-color: #fff;
+}
+
+.btn-close:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group input {
+  height: 40px;
+
+  border: #cccccc solid 1px;
+  border-radius: 5px;
+}
+
+.form-group #desc {
+  height: 80px;
+
+  border: #cccccc solid 1px;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.popup-text {
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.form-group label {
+  color: #444444;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+.imagepost-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.imagepost-text a {
+  color: #f28e31;
+}
+
+.btn-btnchangePostImage {
+  width: 200px;
+  height: 40px;
+
+  color: #fff;
+  background-color: #464646;
+  border-radius: 5px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: inherit;
+}
+
+.btn-savepost {
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+
+  color: #fff;
+  background-color: #3878d7;
+  border-radius: 5px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+.iconaaa {
+  background-image: url('data:image/svg+xml,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="24" fill="#D9D9D9"/><path d="M24.5 15.6962H17C15.8954 15.6962 15 16.5916 15 17.6962V31.6962C15 32.8008 15.8954 33.6962 17 33.6962H31C32.1046 33.6962 33 32.8008 33 31.6962V24.1962" stroke="#444444" stroke-width="2" stroke-linecap="round"/><path d="M30.6888 21.5556L24.3566 27.8422C24.1225 28.0746 23.8346 28.2455 23.5184 28.3396L19.7613 29.4587C19.5741 29.5144 19.3982 29.3436 19.4483 29.1549L20.3638 25.7088C20.4531 25.3729 20.6283 25.066 20.8723 24.8185L27.3642 18.2309M30.6888 21.5556L32.5055 19.7389C33.2866 18.9578 33.2866 17.6915 32.5055 16.9104L32.0093 16.4142C31.2283 15.6332 29.9619 15.6332 29.1809 16.4142L27.3642 18.2309M30.6888 21.5556L27.3642 18.2309" stroke="#444444" stroke-width="2"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 2px 5px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.form-group textarea {
+  resize: none;
+}

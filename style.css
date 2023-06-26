@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0 5px;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.blog-btnAdd {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 20px;
+
+  width: 120px;
+  height: 40px;
+
+  color: white;
+  background-color: #2ac44c;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: 1110px;
+
+  margin: 0 auto;
+}
+.blog-list {
+  --column-number: 1;
+  --grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(var(--column-number), minmax(0, 1fr));
+  grid-gap: var(--grid-gap);
+
+  justify-content: center;
+}
+
+.blog-card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  text-decoration: none;
+  border: #cccccc solid 1px;
+  border-radius: 5px;
+}
+.image-wrap{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+
+}
+.blog-card:hover img{
+
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+.blog-card--img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.blog-card--title {
+  padding-left: 15px;
+
+  color: #f28e31;
+
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.blog-card--desc {
+  padding: 0 15px;
+
+  color: #000;
+
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.blog-card--info {
+  padding: 0 15px;
+  display: flex;
+
+  color: #000;
+
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.blog-card--author {
+  color: #444444;
+  font-weight: 500;
+}
+
+.button-group {
+  position: absolute;
+  z-index: 10;
+  top: 12px;
+  right: 10px;
+  left: auto;
+
+  display: flex;
+  gap: 10px;
+
+
+}
+
+.btn-blog{
+  width: 48px;
+  height: 48px;
+
+  background-color: #D9D9D9;
+
+  border-radius: 100%;
+  cursor: pointer;
+
+  transition: 0.5s;
+
+}
+
+
+.btn-blog:hover{
+  background-color: #FFE1C6;
+
+
+}
+.btn-blog path{
+  stroke: #444444;
+  transition: 0.5s;
+}
+.btn-blog:hover path{
+
+  stroke: #F28E31;
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (min-width: 480px) {
+  .blog-list {
+    --column-number: 2;
+    --grid-gap: 10px;
+  }
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (min-width: 768px) {
+  .blog-list {
+    --column-number: 3;
+    --grid-gap: 15px;
+  }
+}
+
+@media screen and (min-width: 1200) {
+  html {
+    padding: 0;
+  }
+}

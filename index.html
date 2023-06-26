@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="popupAdd.css" />
+  </head>
+  <body>
+    <!-- <div class="popupOverplay"></div> -->
+    <main>
+      <template id="blogTemplate">
+        <a href="#" class="blog-card">
+          <figure class="image-wrap"><img src="" alt="#" class="blog-card--img" /></figure>
+          <h3 class="blog-card--title"></h3>
+          <p class="blog-card--desc"></p>
+          <div class="blog-card--info">
+            by&nbsp;<b class="blog-card--author"></b>&nbsp; - &nbsp;
+            <p class="blog-card--date"></p>
+          </div>
+
+          <div class="button-group">
+            <button class="btn-blog btn-edit" >
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5 1.6962H3C1.89543 1.6962 1 2.59163 1 3.6962V17.6962C1 18.8008 1.89543 19.6962 3 19.6962H17C18.1046 19.6962 19 18.8008 19 17.6962V10.1962"
+                  stroke="#444444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M16.6888 7.55557L10.3566 13.8422C10.1225 14.0746 9.83456 14.2455 9.51841 14.3396L5.76128 15.4587C5.57411 15.5144 5.39816 15.3436 5.4483 15.1549L6.36383 11.7088C6.45307 11.3729 6.6283 11.066 6.87226 10.8185L13.3642 4.23092M16.6888 7.55557L18.5055 5.73887C19.2866 4.95782 19.2866 3.69149 18.5055 2.91044L18.0093 2.41422C17.2283 1.63317 15.9619 1.63317 15.1809 2.41421L13.3642 4.23092M16.6888 7.55557L13.3642 4.23092"
+                  stroke="#444444"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button class="btn-blog btn-delete">
+              <svg
+                width="21"
+                height="22"
+                viewBox="0 0 21 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 4L3 19C3 20.1046 3.89543 21 5 21H16C17.1046 21 18 20.1046 18 19V4"
+                  stroke="#444444"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8.5 10V15"
+                  stroke="#444444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M12.5 10V15"
+                  stroke="#444444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M1 4H20"
+                  stroke="#444444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M5.5 4L5.72147 2.6712C5.8822 1.70683 6.71658 1 7.69425 1H10.5H13.3057C14.2834 1 15.1178 1.70683 15.2785 2.6712L15.5 4"
+                  stroke="#444444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </a>
+      </template>
+      <section>
+        <div class="container">
+          <h1 class="blog-title">Blog</h1>
+          <button class="blog-btnAdd" id="btnAddPost">Add post</button>
+          <div class="blog-list" id="blogList"></div>
+        </div>
+      </section>
+
+      <div class="overlay" id="popup">
+        <div class="popup-add" >
+          <button class="btn-close"></button>
+          <h3 class="popup-title">Add post</h3>
+          <p class="popup-text">
+            Please enter the following information and submit then.
+          </p>
+          <form action="" class="form" id="blogForm">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" required />
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" required />
+            </div>
+            <div class="form-group">
+              <label for="desc">Description</label>
+              <textarea type="text" id="desc" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="imagepost">Image</label>
+              <p class="imagepost-text">
+                We're using <a href="https://picsum.photos/">Picsum service</a> to
+                get a random image.
+              </p>
+              <button class="btn-btnchangePostImage" type="button">Change post image</button>
+              <!-- <input type="text" id="imgInput" /> -->
+              <img src="https://picsum.photos/760/222" alt="" id="imagePost" />
+            </div>
+            <button class="btn-savepost" type="submit">Save</button>
+          </form>
+          <!-- <button class="btn-btnchangePostImage">Change post image</button> -->
+         
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  
+  </body>
+</html>
